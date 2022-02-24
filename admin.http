@@ -1,0 +1,89 @@
+POST http://localhost:5000/admin/create-admin
+content-type: application/json
+
+{
+    "shopName": "Shop",
+    "email": "shop@mail.com",
+    "phone": 1234567890,
+    "password": "shop"
+}
+
+###
+
+POST http://localhost:5000/admin/admin-login
+content-type: application/json
+
+{
+    "email": "shop@mail.com",
+    "password": "shop"
+}
+
+###
+
+GET http://localhost:5000/admin/products/Store
+
+###
+
+POST http://localhost:5000/admin/add-product
+content-type: application/json
+
+{
+    "image": "Image path needs to be here",
+    "productName": "Iphone",
+    "shopName": "Shop",
+    "price": 50000
+}
+
+
+###
+
+PUT http://localhost:5000/admin/edit-product
+content-type: application/json
+
+{
+    "image": "image path",
+    "productName": "IPhone 14 Pro Max Ultra",
+    "shopName": "Shop",
+    "price": 40000,
+    "_id": "6216354800b7eb2cc26f6c83",
+    "__v": 0
+}
+
+
+###
+
+DELETE  http://localhost:5000/admin/delete-product
+content-type: application/json
+
+{
+    "_id": "621634f700b7eb2cc26f6c81"
+}
+
+###
+
+PUT http://localhost:5000/admin/process-order
+content-type: application/json
+
+{
+    "shopName": "Store",
+    "_id": "62172ef9dc84db2906456939"
+}
+
+
+###
+DELETE  http://localhost:5000/admin/delete-account/Shop
+
+###
+
+PUT http://localhost:5000/admin/edit-account
+content-type: application/json
+
+{
+    "shopName": "Shop",
+    "email": "shop@mail.com",
+    "phone": "1234567890",
+    "password": "$2a$05$TTDK3RaMYU2UX5Ww2C5KUu7/eoy0FyqHFwTPF2/EXxLo9YfyG/p/K",
+    "orders": [],
+    "_id": "621659b0cdb46285cff51f27",
+    "__v": 0
+}

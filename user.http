@@ -1,0 +1,82 @@
+POST http://localhost:5000/user/create-user
+content-type: application/json
+
+{
+    "username": "Zayn",
+    "email": "zayn@mail.com",
+    "phone": 1234567890,
+    "address": "1, Street, City, State, Country.",
+    "password": "zayn"
+}
+
+###
+
+POST http://localhost:5000/user/user-login
+content-type: application/json
+
+{
+    "email": "kishore@mail.com",
+    "password": "kishore"
+}
+
+###
+
+GET http://localhost:5000/user/products
+
+###
+
+PUT http://localhost:5000/user/product/add-to-cart
+content-type: application/json
+
+{
+    "email": "kishore@mail.com",
+    "product": {
+        "_id": "6216ff9746972fd93e949762",
+        "image": "Image path needs to be here",
+        "productName": "Mac",
+        "shopName": "Store",
+        "price": 100000,
+        "__v": 0
+    }
+}
+
+###
+
+PUT http://localhost:5000/user/product/remove-from-cart
+content-type: application/json
+
+{
+    "email": "kishore@mail.com",
+    "_id": "62172ec6dc84db2906456937"
+}
+
+###
+
+POST http://localhost:5000/user/product/buy
+content-type: application/json
+
+{
+    "email": "kishore@mail.com"
+}
+
+###
+
+PUT http://localhost:5000/user/edit-user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imtpc2hvcmVAbWFpbC5jb20iLCJpYXQiOjE2NDU2Nzc3ODcsImV4cCI6MTY0NTY3NzkwN30.co6eBGoT7kmC2DE1gcduEqbVsmQfkxbkECBCR2_-1bc
+content-type: application/json
+
+{
+    "_id": "6216fee446972fd93e949757",
+    "username": "Kishore",
+    "email": "kishore@mail.com",
+    "phone": 1234567890,
+    "address": "1, Street, City, State, Country.",
+    "password": "$2a$05$eUgGfdtbfgTowRiAQrcit.BxylYfpLoPqj.Iw7ZOHX4q7mgnEnqGm",
+    "cart": [],
+    "__v": 0
+}
+
+
+###
+
+DELETE http://localhost:5000/user/delete-user/zayn@mail.com
