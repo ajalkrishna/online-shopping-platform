@@ -8,6 +8,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminSignupComponent } from './admin-signup/admin-signup.component';
 import { UserSignupComponent } from './user-signup/user-signup.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
